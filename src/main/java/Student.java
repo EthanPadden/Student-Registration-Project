@@ -50,7 +50,7 @@ public class Student {
     }
 
     public String getUsername() {
-        return username;
+        return name + age;
     }
 
     public void setUsername( String username ) {
