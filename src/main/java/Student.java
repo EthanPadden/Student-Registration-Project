@@ -1,5 +1,6 @@
 import org.joda.time.DateTime;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -9,8 +10,8 @@ public class Student {
     private DateTime dob;
     private long id;
     private String username;
-    private List< Course > course;
-    private List< Module > modules;
+    private ArrayList< Course > course;
+    private ArrayList< Module > modules;
 
     public Student( long id, String name, int age, DateTime dob ) {
         setId( id );
@@ -57,5 +58,21 @@ public class Student {
 
     public void setUsername( String username ) {
         this.username = username;
+    }
+
+    public ArrayList< Course > getCourse() {
+        return course;
+    }
+
+    public void setCourse( ArrayList< Course > course ) {
+        this.course = course;
+    }
+
+    public ArrayList< Module > getModules() {
+        return modules;
+    }
+
+    public void setModules( ArrayList< Module > modules ) {
+        this.modules = modules;
     }
 }
