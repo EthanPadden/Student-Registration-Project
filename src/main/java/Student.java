@@ -1,16 +1,18 @@
+import org.joda.time.DateTime;
+
 import java.util.Date;
 import java.util.List;
 
 public class Student {
     private String name;
     private int age;
-    private Date dob;
+    private DateTime dob;
     private long id;
     private String username;
     private List< Course > course;
     private List< Module > modules;
 
-    public Student( long id, String name, int age, Date dob ) {
+    public Student( long id, String name, int age, DateTime dob ) {
         setId( id );
         setName( name );
         setAge( age );
@@ -41,11 +43,11 @@ public class Student {
         this.age = age;
     }
 
-    public Date getDob() {
+    public DateTime getDob() {
         return dob;
     }
 
-    public void setDob( Date dob ) {
+    public void setDob( DateTime dob ) {
         this.dob = dob;
     }
 
