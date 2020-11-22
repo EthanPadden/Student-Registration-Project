@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Module {
     private String name;
-    private ArrayList<Student> studentsEnrolled;
-    private ArrayList<Course> associatedCourses;
+    private ArrayList< Student > studentsEnrolled;
+    private ArrayList< Course > associatedCourses;
 
     public Module( String name ) {
         setName( name );
@@ -22,15 +22,31 @@ public class Module {
         return studentsEnrolled;
     }
 
-    public void setStudentsEnrolled( ArrayList< Student > studentsEnrolled ) {
-        this.studentsEnrolled = studentsEnrolled;
+    public void addStudent( Student student ) {
+        // Add new student to the students list
+        studentsEnrolled.add( student );
+    }
+
+    public void removeStudent( Student student ) {
+        // If the student is in the students list, remove it
+        if ( studentsEnrolled.contains( student ) ) {
+            studentsEnrolled.remove( student );
+        }
     }
 
     public ArrayList< Course > getAssociatedCourses() {
         return associatedCourses;
     }
 
-    public void setAssociatedCourses( ArrayList< Course > associatedCourses ) {
-        this.associatedCourses = associatedCourses;
+    public void addAssociatedCourse( Course course ) {
+        // Add new course to the course list
+        associatedCourses.add( course );
+    }
+
+    public void removeAssociatedCourse( Course course ) {
+        // If the course is in the course list, remove it
+        if ( associatedCourses.contains( course ) ) {
+            associatedCourses.remove( course );
+        }
     }
 }
