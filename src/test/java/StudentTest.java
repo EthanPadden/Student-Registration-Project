@@ -76,7 +76,28 @@ class StudentTest {
         // Verify modules are removed
         assertFalse( student.getModules().contains( module1 ) );
         assertFalse( student.getModules().contains( module2 ) );
+    }
 
+    @Test
+    public void moduleModifierMethodsShouldModifyModules(){
+        // Create student
+        long id = 123;
+        String studentName = "John Doe";
+        int age = 21;
+        DateTime dob = new DateTime( 1999, 3, 4, 0, 0 );
+        Student student = new Student( id, studentName, age, dob );
 
+        // Add module to student
+        Module module = new Module( "M1" );
+        student.addModule( module );
+
+        // Verify module is added
+        assertEquals( module, student.getModules().get( 0 ) );
+
+        // Remove module
+        student.removeModule( module );
+
+        // Verify module is removed
+        assertFalse( student.getModules().contains( module ) );
     }
 }
