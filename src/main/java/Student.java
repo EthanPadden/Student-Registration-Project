@@ -16,6 +16,8 @@ public class Student {
         setName( name );
         setAge( age );
         setDob( dob );
+        courses = new ArrayList< Course >();
+        modules = new ArrayList< Module >();
     }
 
     public long getId() {

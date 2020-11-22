@@ -8,6 +8,8 @@ public class Module {
 
     public Module( String name ) {
         setName( name );
+        studentsEnrolled = new ArrayList< Student >();
+        associatedCourses = new ArrayList< Course >();
     }
 
     public String getName() {

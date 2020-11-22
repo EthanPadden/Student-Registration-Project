@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Course {
     private String name;
-    private ArrayList<Module> modules;
-    private ArrayList< Student> studentsEnrolled;
+    private ArrayList< Module > modules;
+    private ArrayList< Student > studentsEnrolled;
     private DateTime startDate;
     private DateTime endDate;
 
@@ -15,6 +15,8 @@ public class Course {
         setName( name );
         setStartDate( startDate );
         setEndDate( endDate );
+        modules = new ArrayList< Module >();
+        studentsEnrolled = new ArrayList< Student >();
     }
 
     public String getName() {
