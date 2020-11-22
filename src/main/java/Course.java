@@ -45,15 +45,31 @@ public class Course {
         return modules;
     }
 
-    public void setModules( ArrayList< Module > modules ) {
-        this.modules = modules;
+    public void addModule( Module module ) {
+        // Add new module to the modules list
+        modules.add( module );
+    }
+
+    public void removeModule( Module module ) {
+        // If the module is in the modules list, remove it
+        if ( modules.contains( module ) ) {
+            modules.remove( module );
+        }
     }
 
     public ArrayList< Student > getStudentsEnrolled() {
         return studentsEnrolled;
     }
 
-    public void setStudentsEnrolled( ArrayList< Student > studentsEnrolled ) {
-        this.studentsEnrolled = studentsEnrolled;
+    public void addStudent( Student student ) {
+        // Add new student to the students list
+        studentsEnrolled.add( student );
+    }
+
+    public void removeStudent( Student student ) {
+        // If the student is in the students list, remove it
+        if ( studentsEnrolled.contains( student ) ) {
+            studentsEnrolled.remove( student );
+        }
     }
 }
