@@ -21,7 +21,7 @@ class ModuleTest {
         String studentName = "John Doe";
         int age = 21;
         DateTime dob = new DateTime( 1999, 3, 4, 0, 0 );
-        Student student = new Student( id, studentName, age, dob );
+        Student student = new Student( id, studentName, dob );
 
         // Add student to module
         Module module = new Module( "M1" );
