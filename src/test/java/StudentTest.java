@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
     @Test
-    public void constructorShouldSetValues() {
+    public void constructorShouldSetValuesAndCalculateAge() {
         long id = 123;
         String name = "John Doe";
         int age = 21;
         DateTime dob = new DateTime( 1999, 3, 4, 0, 0 );
 
-        Student student = new Student( id, name, age, dob );
+        Student student = new Student( id, name, dob );
         assertEquals( id, student.getId() );
         assertEquals( name, student.getName() );
         assertEquals( age, student.getAge() );
@@ -29,23 +29,23 @@ class StudentTest {
 
         String expectedUsername = name + age;
 
-        Student student = new Student( id, name, age, dob );
+        Student student = new Student( id, name, dob );
         assertEquals( student.getUsername(), expectedUsername );
     }
 
     @Test
-    public void courseModifierMethodsShouldModifyCoursesAndModules(){
+    public void courseModifierMethodsShouldModifyCoursesAndModules() {
         // Create student
         long id = 123;
         String studentName = "John Doe";
         int age = 21;
         DateTime dob = new DateTime( 1999, 3, 4, 0, 0 );
-        Student student = new Student( id, studentName, age, dob );
+        Student student = new Student( id, studentName, dob );
 
         // Create course
         String courseName = "Computer Science";
-        DateTime startDate = new DateTime(2017, 9, 1, 0,0);
-        DateTime endDate = new DateTime(2021, 5, 31, 0,0);
+        DateTime startDate = new DateTime( 2017, 9, 1, 0, 0 );
+        DateTime endDate = new DateTime( 2021, 5, 31, 0, 0 );
         Course course = new Course( courseName, startDate, endDate );
 
         // Add course modules
@@ -61,7 +61,7 @@ class StudentTest {
         assertEquals( course, student.getCourses().get( 0 ) );
 
         // Verify modules are added
-        ArrayList<Module> expectedModules = new ArrayList< Module >();
+        ArrayList< Module > expectedModules = new ArrayList< Module >();
         expectedModules.add( module1 );
         expectedModules.add( module2 );
 
@@ -79,13 +79,13 @@ class StudentTest {
     }
 
     @Test
-    public void moduleModifierMethodsShouldModifyModules(){
+    public void moduleModifierMethodsShouldModifyModules() {
         // Create student
         long id = 123;
         String studentName = "John Doe";
         int age = 21;
         DateTime dob = new DateTime( 1999, 3, 4, 0, 0 );
-        Student student = new Student( id, studentName, age, dob );
+        Student student = new Student( id, studentName, dob );
 
         // Add module to student
         Module module = new Module( "M1" );

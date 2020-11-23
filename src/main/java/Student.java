@@ -11,13 +11,20 @@ public class Student {
     private ArrayList< Course > courses;
     private ArrayList< Module > modules;
 
-    public Student( long id, String name, int age, DateTime dob ) {
+    public Student( long id, String name, DateTime dob ) {
+        // Set details
         setId( id );
         setName( name );
-        setAge( age );
         setDob( dob );
+
+        // Create arraylists
         courses = new ArrayList< Course >();
         modules = new ArrayList< Module >();
+
+        // Calculate age
+        int thisYear = DateTime.now().getYear();
+        int age = thisYear - dob.getYear();
+        setAge( age );
     }
 
     public long getId() {

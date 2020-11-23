@@ -45,7 +45,7 @@ class CourseTest {
         String studentName = "John Doe";
         int age = 21;
         DateTime dob = new DateTime( 1999, 3, 4, 0, 0 );
-        Student student = new Student( id, studentName, age, dob );
+        Student student = new Student( id, studentName, dob );
 
         // Create course
         String courseName = "Computer Science";
